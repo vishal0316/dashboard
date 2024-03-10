@@ -26,10 +26,11 @@ import "./App.css";
 
 const App = () => {
   const activeMenu = true;
+
   return (
     <>
       <BrowserRouter>
-        <div className="flex relative bg-main-dark-bg">
+        <div className="flex relative ">
           <div className="fixed right-4 bottom-4 " style={{ zIndex: "1000" }}>
             <TooltipComponent content={FiSettings} position="Top">
               <button
@@ -41,11 +42,11 @@ const App = () => {
             </TooltipComponent>
           </div>
           {activeMenu ? (
-            <div className="w-72 fixed sidebar bg-secondary-dark-bg">
+            <div className="w-72 fixed sidebar">
               <Sidebar />
             </div>
           ) : (
-            <div className="w-0 bg-secondary-dark-bg ">
+            <div className="w-0  ">
               <Sidebar />
             </div>
           )}
